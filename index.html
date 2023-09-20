@@ -1,45 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Papeleria</title>
-    
-</head>
-<body>
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="estilos/styles.css" />
+    <link rel="webside icon" type="svg" href="estilos/img/book-solid.svg" />
+    <script
+      src="https://kit.fontawesome.com/6dc7cbf907.js"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
     <header>
-        <nav class="nav__hero">
-            <div class="container nav__container">
-                <div class="logo">
-                    <img src="" alt="Logo marca">
-                </div>
-                <!--Enlaces de navegación-->
-                <div class="links">
-                    <a href="#" class="link">Inicio</a>
-                    <a href="#servicios" class="link">Servicios</a>
-                    <a href="#productos" class="link">Productos</a>
-                    <a href="#clientes" class="link">Clientes</a>
-                    <a href="#contacto" class="link">Contacto</a>
-                </div>
-            </div>
-        </nav>
+      <nav class="nav__hero">
+        <div class="nav__container">
+          <div class="logo">
+            <img src="estilos/img/logo.jpeg" alt="Logo marca" />
+          </div>
+          <div class="buscar-nav">
+            <input type="text" placeholder="Buscar" id="input_buscar" />
+            <a href="#"> <i class="fa-solid fa-magnifying-glass icon"></i></a>
+          </div>
+          <!--Enlaces de navegación-->
+          <div class="links">
+            <a href="#" class="link">Inicio</a>
+            <a href="#" class="link">Mi perfil</a>
+            <a href="#" class="link">Mis compras</a>
+            <a href="#" class="link">Contacto</a>
+            <a href="#"> <i class="fa-solid fa-cart-shopping icon"></i></a>
+            <span id="contadorCarrito"></span>
+          </div>
+        </div>
+        <div>
+        </div>
+      </nav>
     </header>
     <main>
-        <!-- Esta seccion es para el banner -->
-        <section class="banner">
-
-        </section>
-        <!-- Esta seccion es para el buscador -->
-        <section>
-
-        </section>
-        <!-- Esta seccion es para los productos -->
-        <section>
-            
-        </section>
+      <!-- Esta seccion es para el banner -->
+      <section class="banner_hero">
+        <div class="banner_titulos">
+          <h1 class="banner-txt1">
+            Tenemos todo lo que estas buscando en papeleria
+          </h1>
+          <p class="banner-txt2">Consigue descuentos hasta del 70%!</p>
+        </div>
+      </section>
+      <!-- Esta seccion es para las categorias -->
+      <section class="contenedor-categorias">
+        <div class="categorias ofertas">
+          <i class="fa-solid fa-book-open-reader"></i>
+          <a href="#">Ofertas</a>
+        </div>
+        <div class="categorias">
+          <i class="fa-solid fa-business-time"></i>
+          <a href="#">Oficina</a>
+        </div>
+        <div class="categorias">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <a href="#">Escolar</a>
+        </div>
+        <div class="categorias">
+          <i class="fa-solid fa-book-open-reader"></i>
+          <a href="#">Libros</a>
+        </div>
+      </section>
+      <!-- Esta seccion es para los productos -->
+      <h2 class="tituloProductos">Ofertas</h2>
+      <section class="contenedor-productos">
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="1"
+            class="fa-solid fa-cart-shopping"><span id="producto1"></span></i>
+          <img class="imagenProducto" src="estilos/img/producto1.jpg" alt=" " />
+          <div class="text-productos">
+                <h3>10.000$</h3>
+                <p>Post Sticks 76 mm x 76 mm</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="2"
+            class="fa-solid fa-cart-shopping"><span id="producto2"></span></i>
+          <img class="imagenProducto" src="estilos/img/set-de-48-lapices-de-colores-a-base-de-cera-suave.webp" alt=" " />
+          <div class="text-productos">
+                <h3>15.000$</h3>
+                <p>Lapices de colores</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="3"
+            class="fa-solid fa-cart-shopping"><span id="producto3"></i>
+          <img class="imagenProducto"src="estilos/img/producto3.jpg" alt=" " />
+          <div class="text-productos">
+                <h3>8.000$</h3>
+                <p>Libretas 15 mm x 10 mm</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="4"
+            class="fa-solid fa-cart-shopping"><span id="producto4"></i>
+          <img class="imagenProducto" src="estilos/img/producuto4.jpg" alt=" " />
+          <div class="text-productos">
+                <h3>10.000$</h3>
+                <p>Hojas de papel A4</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="5"
+            class="fa-solid fa-cart-shopping"><span id="producto4"></i>
+          <img class="imagenProducto"  src="estilos/img/descarga.jpeg" alt=" " />
+          <div class="text-productos">
+                <h3>1.000$</h3>
+                <p>Lapiceros</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+        <div class="producto">
+          <i
+            onclick="agregarCarro()"
+            id="5"
+            class="fa-solid fa-cart-shopping"><span id="producto6"></i>
+          <img class="imagenProducto" src="estilos/img/acuarelas.webp" alt=" " />
+          <div class="text-productos">
+                <h3>3.000$</h3>
+                <p>Pinturas acrílicas</p>
+                <span>Envio Gratis</span>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
+    <footer class="piePagina">
+        <section class="infoPiePagina">
+         <!-- Conócenos -->
+           <div class="pconocenos">
+          <h2>Conócenos</h2>
+          <p><a href="#!">¿Quiénes somos?</a></p>
+          <p><a href="#!">Trabaja con nosotros</a></p>
+          <p><a href="#!">Contáctanos</a></p>
+           </div>
+
+         <!-- Redes sociales -->
+          <div class="psocial">
+          <h2>Síguenos en redes sociales</h2>
+          <div>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
+           </div>
+
+           <!-- Contáctanos -->
+          <div class="pcontactanos">
+          <!-- Links -->
+          <h2>Contáctanos</h2>
+          <p><i class="fas fa-home me-3"></i>Calle Falsa 123, Bogotá, Colombia</p>
+          <p><i class="fas fa-envelope me-3"></i>info@papeleria.com</p>
+          <p><i class="fas fa-phone me-3"></i>+ 57 234 567 88</p>
+        </div>
+        </section>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap');
+
+:root {
+    --principal: #93BBFF;
+    --secundario: #fefefe;
+    --fondo: #ffffff80;
+    --texto: #ffffff90;
+    --titulo: #011265;
+    --titulo2: #232946;
+    /*Definición de sombra con desplazamiento y enfoque*/
+
+    /*arriba, derecha, izquierda y abajo y el último valor siempre hará referencia al difuminado*/
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+/*Selector Universal*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-weight: 300px;
+    font-size: 20px;
+}
+.nav__container{
+    background: var(--principal);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+ .nav__container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.logo img{
+    width: 200px;
+}
+#input_buscar{
+    border: 1px solid var(--fondo);
+    border-radius: 30px;
+    background: var(--secundario);
+    padding: 10px 30px ;
+}
+.icon{
+    color: var(--secundario);
+    padding: 0px 10px;
+}
+.link{
+    margin: 10px;
+    text-decoration: none;
+    color: var(--texto);
+}
+.banner_hero{
+    width: 100%;
+    height: 600px;
+    animation: banner 10s infinite linear alternate;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+@keyframes banner{
+    0%, 30%{
+        background-image: url('img/banner4.jpg');
+        background-size: cover;
+    }
+    35%, 65%{
+        background-image: url('img/banner2.jpg');
+        background-size: cover;
+    } 
+    70%, 100%{
+        background-image: url('img/banner3.jpg');
+        background-size: cover;
+    }
+}
+.banner_titulos{
+    color: var(--secundario);
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-shadow:var(--titulo2) 0.1em 0.1em 0.2em
+}
+
+.banner-txt1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    
+}
+
+/*seccion de filtros*/
+.contenedor-categorias{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+.categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--titulo);
+    width: 5%;
+    height: 80px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.categorias a{
+ text-decoration: none;
+ margin-top: 10px;
+ color: var(--secundario);
+ font-size:15px ;
+}
+ .categorias i{
+    color: var(--secundario);
+ }
+ .ofertas{
+    background-color: #93BBFF;
+ }
+
+ /*Productos*/
+ .tituloProductos{
+    margin: 7% 0 5% 10%;
+ }
+ .contenedor-productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+ }
+
+ .producto{
+    margin: 50px;
+    padding: 2% 5%;
+    background-color: #e2dddd90;
+    border-radius: 15px;
+ }
+ .producto:hover{
+    padding: 1.5% 4.5%;
+    border: 1px solid var(--titulo2);
+    transition: 0.4s;
+ }
+
+ .imagenProducto{
+    width: 300px;
+    height: 200px;
+ }
+.contenedor-productos .producto i{
+    position: relative;
+    top: 100px;
+    left:280px;
+    color: var(--titulo2);
+    cursor: pointer;
+}
+.text-productos{
+    margin: 20px;
+}
+.text-productos h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.text-productos span{
+    color: rgb(3, 197, 132);
+    font-size: 15px;
+}
+.text-productos p{
+    margin: 30px 0 15px 0;
+    font-weight: 100;
+}
+
+/* Footer */
+.piePagina{
+    width: 100%;
+    background-color: var(--principal);
+    text-decoration: none;
+}
+.piePagina .infoPiePagina{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px; 
+}
+.piePagina .infoPiePagina h2{
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+.piePagina .infoPiePagina p{
+    margin-bottom: 10px;
+}
+.piePagina .infoPiePagina .pconocenos a{
+    text-decoration: none;
+    color: var(--titulo2);
+}
+.piePagina .infoPiePagina .psocial a{
+    display: inline-block;
+    color: var(--titulo2);
+    margin-right: 70px;
+    line-height: 45px;
+    font-size: 40px;
+}
+.piePagina .infoPiePagina .pcontactanos i{
+    display: inline-block;
+    margin-right: 30px;
+}
+.piePagina .infoPiePagina .pcontactanos p{
+    margin-left: 10px;
+    font-size: 18px;
+}
